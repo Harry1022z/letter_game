@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Palabras</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div id="start">
+        <h1>Juego de Palabras</h1>
+        <div id="rules">
+            <h2>Reglas del Juego</h2>
+            <p>1. Cada jugador tiene un turno para ingresar palabras.</p>
+            <p>2. No se permiten palabras repetidas por jugador.</p>
+            <p>3. Las palabras deben comenzar con la letra asignada en cada turno.</p>
+            <p>4. Cada jugador tiene 60 segundos para ingresar palabras.</p>
+            <p>5. Si un jugador no ingresa una palabra en su turno, pasa automáticamente al siguiente jugador.</p>
+            <p>6. El juego termina después de que todos los jugadores hayan completado sus turnos.</p>
+            <p>7. El jugador con más palabras válidas al final del juego gana.</p>
+        </div>
+        <div id="mode-buttons">
+            <button id="classic-mode">Jugar</button>
+        </div>
+    </div>
+
+    <div id="configuration" style="display: none;">
+        <h2>Configuración de Jugadores</h2>
+        <div id="players-config">
+            <!-- Aquí se generan los inputs para cada jugador -->
+        </div>
+        <button id="start-game">Iniciar Juego</button>
+    </div>
+
+    <div id="game" style="display: none;">
+        <h2 id="current-player"></h2>
+        <div id="player-input">
+            <input type="text" id="word-input" placeholder="Ingresa una palabra">
+            <button id="submit-word">Enviar</button>
+        </div>
+        <button id="skip-turn">Pasar Turno</button>
+        <div id="time-left"></div>
+    </div>
+
+    <div id="end" style="display: none;">
+        <h2>¡Juego Terminado!</h2>
+        <div id="leaderboard">
+            <!-- Aquí se generan las tarjetas de ranking -->
+        </div>
+        <button id="restart">Jugar Otra vez</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
